@@ -1,12 +1,4 @@
-import "@fontsource-variable/inter";
-import "@fontsource/noto-sans-devanagari/400.css";
-import "@fontsource/noto-sans-devanagari/600.css";
-import "@fontsource/noto-sans-tamil/400.css";
-import "@fontsource/noto-sans-tamil/600.css";
-import "@fontsource/noto-sans-telugu/400.css";
-import "@fontsource/noto-sans-telugu/600.css";
-import "@fontsource/noto-sans-bengali/400.css";
-import "@fontsource/noto-sans-bengali/600.css";
+import "./fonts";
 import { Inbox, Moon, Sun } from "lucide-react";
 import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";

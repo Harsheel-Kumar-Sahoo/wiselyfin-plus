@@ -1,7 +1,7 @@
 /* Design tokens. Every color, radius and shadow in the app comes from here. */
 :root {
-  --font-sans: "Inter Variable", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu",
-    "Noto Sans Bengali", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans Variable", "Noto Sans Devanagari", "Noto Sans Tamil",
+    "Noto Sans Telugu", "Noto Sans Bengali", system-ui, sans-serif;
 
   /* Neutral base */
   --bg: #ffffff;
