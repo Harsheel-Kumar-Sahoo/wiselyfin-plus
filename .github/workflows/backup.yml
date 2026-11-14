@@ -1,0 +1,27 @@
+name: Database backup
+
+on:
+  schedule:
+    - cron: "30 20 * * *"
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsx scripts/backup.ts
+        env:
+          BACKUP_MONGODB_URI: ${{ secrets.BACKUP_MONGODB_URI }}
+      - name: Compress backup
+        run: tar -czf wiselyfin-backup.tar.gz backups
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wiselyfin-backup-${{ github.run_number }}
+          path: wiselyfin-backup.tar.gz
+          retention-days: 30

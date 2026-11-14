@@ -17,11 +17,13 @@
     "@types/express": "5.0.6",
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "26.6.6",
+    "bson": "7.3.4",
     "tsx": "4.23.15",
     "typescript": "7.0.2"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "smoke": "tsx scripts/smoke-test.ts"
+    "smoke": "tsx scripts/smoke-test.ts",
+    "backup": "tsx scripts/backup.ts"
   }
 }
