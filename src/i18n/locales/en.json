@@ -25,7 +25,26 @@
     "noAccount": "Do not have an account?",
     "haveAccount": "Already have an account?",
     "sendLink": "Send reset link",
-    "newPassword": "New password"
+    "newPassword": "New password",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in to continue learning.",
+    "signupTitle": "Create your account",
+    "signupSubtitle": "Start learning about money today.",
+    "forgotTitle": "Forgot your password?",
+    "forgotSubtitle": "Enter your email and we will send you a reset link.",
+    "forgotSent": "If an account exists for this email, a reset link has been sent.",
+    "resetTitle": "Choose a new password",
+    "resetSuccess": "Your password has been changed. Please log in.",
+    "backToLogin": "Back to log in",
+    "passwordHint": "At least 8 characters, with a letter and a number.",
+    "verifyTitle": "Verify your email",
+    "verifyChecking": "Checking your link...",
+    "verifySuccess": "Your email is verified.",
+    "verifyFailed": "This link is not valid or has expired.",
+    "verifyBanner": "Please verify your email address.",
+    "resend": "Send link again",
+    "resendSent": "If email sending is available, a new link is on its way.",
+    "missingToken": "This link is incomplete. Please open it again from your email."
   },
   "common": {
     "loading": "Loading...",
@@ -40,9 +59,30 @@
     "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
-    "switchTheme": "Switch theme"
+    "switchTheme": "Switch theme",
+    "mainNav": "Main menu",
+    "pageNotFoundTitle": "Page not found",
+    "pageNotFoundBody": "This address does not exist.",
+    "goHome": "Go to Home",
+    "serverDownTitle": "Could not reach the server",
+    "serverDownBody": "Please check your internet and try again."
   },
   "coins": {
     "finCoins": "FinCoins"
+  },
+  "errors": {
+    "BAD_LOGIN": "Email or password is not correct.",
+    "ACCOUNT_LOCKED": "Too many wrong passwords. Please try again in a few minutes.",
+    "EMAIL_TAKEN": "An account with this email already exists.",
+    "RATE_LIMITED": "Too many attempts. Please wait a few minutes and try again.",
+    "BAD_TOKEN": "This link is not valid or has expired.",
+    "INVALID_INPUT": "Please check the details you entered.",
+    "NETWORK": "Could not reach the server. Please check your internet.",
+    "SERVER_ERROR": "Something went wrong on our side. Please try again.",
+    "UNAUTHORIZED": "Please log in to continue."
+  },
+  "home": {
+    "welcomeTitle": "Welcome, {{name}}",
+    "welcomeBody": "Your learning journey starts here. More features arrive in the next steps."
   }
 }
