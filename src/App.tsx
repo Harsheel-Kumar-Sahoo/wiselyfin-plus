@@ -1,27 +1,14 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GuestRoute, ProtectedRoute } from "./auth/ProtectedRoute";
 import { useAuth } from "./auth/useAuth";
 import { AppShell } from "./components/AppShell";
-import { Card } from "./components/Card";
 import { ToastViewport } from "./components/Toast";
 import { queryClient } from "./lib/queryClient";
+import { Login } from "./pages/auth/Login";
+import { Signup } from "./pages/auth/Signup";
 import { ComingSoon, Home, NotFound } from "./pages/Basic";
-
-// Temporary login screen. The real one arrives in the next step.
-function LoginPlaceholder() {
-  const { t } = useTranslation();
-  return (
-    <div className="mx-auto max-w-md p-8">
-      <Card className="space-y-2">
-        <h1 className="text-2xl font-semibold">{t("auth.loginTitle")}</h1>
-        <p className="text-muted">{t("auth.loginSubtitle")}</p>
-      </Card>
-    </div>
-  );
-}
 
 export function App() {
   const load = useAuth((s) => s.load);
@@ -35,7 +22,8 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<GuestRoute />}>
-            <Route path="/login" element={<LoginPlaceholder />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Route>
 
           <Route element={<ProtectedRoute />}>
