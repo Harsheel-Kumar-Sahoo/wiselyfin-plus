@@ -1,6 +1,7 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 import { connectDb } from "./db/connect.js";
+import { accountRouter } from "./routes/account.js";
 import { authRouter } from "./routes/auth.js";
 import { errorHandler, notFound } from "./utils/errors.js";
 
@@ -34,6 +35,7 @@ app.get("/api/health", async (_req, res) => {
 });
 
 app.use("/api/auth", authRouter);
+app.use("/api/auth", accountRouter);
 
 app.use(notFound);
 app.use(errorHandler);
