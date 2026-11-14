@@ -6,8 +6,11 @@ import { useAuth } from "./auth/useAuth";
 import { AppShell } from "./components/AppShell";
 import { ToastViewport } from "./components/Toast";
 import { queryClient } from "./lib/queryClient";
+import { ForgotPassword } from "./pages/auth/ForgotPassword";
 import { Login } from "./pages/auth/Login";
+import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
+import { VerifyEmail } from "./pages/auth/VerifyEmail";
 import { ComingSoon, Home, NotFound } from "./pages/Basic";
 
 export function App() {
@@ -24,7 +27,11 @@ export function App() {
           <Route element={<GuestRoute />}>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
           </Route>
+
+          <Route path="/verify-email" element={<VerifyEmail />} />
 
           <Route element={<ProtectedRoute />}>
             <Route element={<AppShell />}>
