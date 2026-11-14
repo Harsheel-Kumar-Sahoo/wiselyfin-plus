@@ -1,0 +1,48 @@
+{
+  "app": {
+    "name": "WiselyFin Plus",
+    "tagline": "Learn. Play. Grow Financially."
+  },
+  "nav": {
+    "home": "Home",
+    "learn": "Learn",
+    "tools": "Tools",
+    "wallet": "Wallet",
+    "profile": "Profile",
+    "leaderboard": "Leaderboard",
+    "news": "News",
+    "about": "About"
+  },
+  "auth": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "noAccount": "Do not have an account?",
+    "haveAccount": "Already have an account?",
+    "sendLink": "Send reset link",
+    "newPassword": "New password"
+  },
+  "common": {
+    "loading": "Loading...",
+    "retry": "Try again",
+    "errorTitle": "Something went wrong",
+    "errorBody": "Please try again in a little while.",
+    "emptyTitle": "Nothing here yet",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "switchTheme": "Switch theme"
+  },
+  "coins": {
+    "finCoins": "FinCoins"
+  }
+}

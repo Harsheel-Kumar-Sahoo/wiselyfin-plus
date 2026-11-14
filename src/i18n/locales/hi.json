@@ -1,0 +1,48 @@
+{
+  "app": {
+    "name": "WiselyFin Plus",
+    "tagline": "सीखें। खेलें। आर्थिक रूप से आगे बढ़ें।"
+  },
+  "nav": {
+    "home": "होम",
+    "learn": "सीखें",
+    "tools": "टूल्स",
+    "wallet": "वॉलेट",
+    "profile": "प्रोफ़ाइल",
+    "leaderboard": "लीडरबोर्ड",
+    "news": "समाचार",
+    "about": "हमारे बारे में"
+  },
+  "auth": {
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "logout": "लॉग आउट",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "name": "नाम",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "resetPassword": "पासवर्ड रीसेट करें",
+    "noAccount": "खाता नहीं है?",
+    "haveAccount": "पहले से खाता है?",
+    "sendLink": "रीसेट लिंक भेजें",
+    "newPassword": "नया पासवर्ड"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "retry": "फिर कोशिश करें",
+    "errorTitle": "कुछ गड़बड़ हो गई",
+    "errorBody": "कृपया थोड़ी देर बाद फिर कोशिश करें।",
+    "emptyTitle": "यहाँ अभी कुछ नहीं है",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "close": "बंद करें",
+    "language": "भाषा",
+    "theme": "थीम",
+    "light": "लाइट",
+    "dark": "डार्क",
+    "switchTheme": "थीम बदलें"
+  },
+  "coins": {
+    "finCoins": "फिनकॉइन्स"
+  }
+}

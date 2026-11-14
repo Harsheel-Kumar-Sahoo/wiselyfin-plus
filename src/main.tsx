@@ -10,30 +10,36 @@ import "@fontsource/noto-sans-bengali/600.css";
 import { Moon, Sun } from "lucide-react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { useTranslation } from "react-i18next";
+import { LanguageSelect } from "./components/LanguageSelect";
+import "./i18n";
 import "./index.css";
 import { applyTheme } from "./theme/theme";
 import { useTheme } from "./theme/useTheme";
 
 applyTheme(useTheme.getState().theme);
 
-// Temporary screen to check tokens, icons and the theme switch. Replaced in later steps.
+// Temporary screen to check languages and theme. Replaced in later steps.
 function Preview() {
+  const { t } = useTranslation();
   const { theme, toggle } = useTheme();
   return (
     <div className="min-h-screen bg-bg p-8 text-ink">
       <div className="mx-auto max-w-md space-y-4 rounded-card border border-line bg-surface p-6 shadow-card">
-        <h1 className="text-2xl font-semibold">WiselyFin Plus</h1>
-        <p className="text-muted">Learn. Play. Grow Financially.</p>
-        <p className="text-muted">नमस्ते &nbsp; வணக்கம் &nbsp; నమస్కారం &nbsp; নমস্কার</p>
-        <p className="text-coin">1,250 FinCoins</p>
-        <button
-          type="button"
-          onClick={toggle}
-          className="inline-flex items-center gap-2 rounded-control bg-accent px-4 py-2 font-medium text-on-accent hover:bg-accent-hover"
-        >
-          {theme === "light" ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
-          Switch theme
-        </button>
+        <h1 className="text-2xl font-semibold">{t("app.name")}</h1>
+        <p className="text-muted">{t("app.tagline")}</p>
+        <p className="text-coin">1,250 {t("coins.finCoins")}</p>
+        <LanguageSelect />
+        <div>
+          <button
+            type="button"
+            onClick={toggle}
+            className="inline-flex items-center gap-2 rounded-control bg-accent px-4 py-2 font-medium text-on-accent hover:bg-accent-hover"
+          >
+            {theme === "light" ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
+            {t("common.switchTheme")}
+          </button>
+        </div>
       </div>
     </div>
   );
