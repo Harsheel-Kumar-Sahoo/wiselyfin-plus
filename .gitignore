@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vercel/
+
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+
+# Logs and test output
+*.log
+coverage/
+playwright-report/
+test-results/
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local database exports
+backups/
