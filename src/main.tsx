@@ -1,10 +1,46 @@
+import "@fontsource-variable/inter";
+import "@fontsource/noto-sans-devanagari/400.css";
+import "@fontsource/noto-sans-devanagari/600.css";
+import "@fontsource/noto-sans-tamil/400.css";
+import "@fontsource/noto-sans-tamil/600.css";
+import "@fontsource/noto-sans-telugu/400.css";
+import "@fontsource/noto-sans-telugu/600.css";
+import "@fontsource/noto-sans-bengali/400.css";
+import "@fontsource/noto-sans-bengali/600.css";
+import { Moon, Sun } from "lucide-react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import { applyTheme } from "./theme/theme";
+import { useTheme } from "./theme/useTheme";
 
-// Temporary screen. It is replaced in the next sub-steps.
+applyTheme(useTheme.getState().theme);
+
+// Temporary screen to check tokens, icons and the theme switch. Replaced in later steps.
+function Preview() {
+  const { theme, toggle } = useTheme();
+  return (
+    <div className="min-h-screen bg-bg p-8 text-ink">
+      <div className="mx-auto max-w-md space-y-4 rounded-card border border-line bg-surface p-6 shadow-card">
+        <h1 className="text-2xl font-semibold">WiselyFin Plus</h1>
+        <p className="text-muted">Learn. Play. Grow Financially.</p>
+        <p className="text-muted">नमस्ते &nbsp; வணக்கம் &nbsp; నమస్కారం &nbsp; নমস্কার</p>
+        <p className="text-coin">1,250 FinCoins</p>
+        <button
+          type="button"
+          onClick={toggle}
+          className="inline-flex items-center gap-2 rounded-control bg-accent px-4 py-2 font-medium text-on-accent hover:bg-accent-hover"
+        >
+          {theme === "light" ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
+          Switch theme
+        </button>
+      </div>
+    </div>
+  );
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="p-8 text-lg">The WiselyFin Plus frontend is running.</div>
+    <Preview />
   </StrictMode>
 );
