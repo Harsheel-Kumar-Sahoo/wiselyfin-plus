@@ -4,6 +4,8 @@ import { connectDb } from "./db/connect.js";
 import { accountRouter } from "./routes/account.js";
 import { authRouter } from "./routes/auth.js";
 import { cronRouter } from "./routes/cron.js";
+import { learnRouter } from "./routes/learn.js";
+import { walletRouter } from "./routes/wallet.js";
 import { errorHandler, notFound } from "./utils/errors.js";
 
 export const app = express();
@@ -38,6 +40,8 @@ app.get("/api/health", async (_req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api/auth", accountRouter);
 app.use("/api/cron", cronRouter);
+app.use("/api/learn", learnRouter);
+app.use("/api/wallet", walletRouter);
 
 app.use(notFound);
 app.use(errorHandler);
