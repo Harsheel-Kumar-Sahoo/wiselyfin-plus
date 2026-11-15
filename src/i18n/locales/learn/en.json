@@ -1,0 +1,30 @@
+{
+  "learn": {
+    "title": "Learn",
+    "subtitle": "Pick a path and learn with short lessons.",
+    "lessonsDone": "{{done}} of {{total}} lessons done",
+    "start": "Start",
+    "continue": "Continue",
+    "review": "Review",
+    "lessons": "Lessons",
+    "passed": "Passed",
+    "bestScore": "Best score: {{score}}%",
+    "reward": "{{coins}} FinCoins and {{xp}} XP",
+    "quiz": "Quiz",
+    "submit": "Check answers",
+    "answerAll": "Please answer every question.",
+    "score": "You got {{correct}} of {{total}} right ({{percent}}%).",
+    "resultPassed": "Well done. You passed this lesson.",
+    "resultFailed": "Not passed yet. Read the lesson again and try once more.",
+    "tryAgain": "Try again",
+    "nextLesson": "Next lesson",
+    "backToPath": "Back to path",
+    "earned": "You earned {{coins}} FinCoins and {{xp}} XP.",
+    "alreadyEarned": "You already collected the reward for this lesson.",
+    "pathDone": "Path completed. Bonus: {{coins}} FinCoins.",
+    "correct": "Correct",
+    "wrong": "Not correct",
+    "noPaths": "No learning paths are available yet.",
+    "notFound": "This page was not found."
+  }
+}

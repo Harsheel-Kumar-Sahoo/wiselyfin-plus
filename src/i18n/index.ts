@@ -1,9 +1,14 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { LANGUAGE_KEY, isLanguageCode, type LanguageCode } from "./languages";
 import bn from "./locales/bn.json";
 import en from "./locales/en.json";
 import hi from "./locales/hi.json";
-import { LANGUAGE_KEY, isLanguageCode, type LanguageCode } from "./languages";
+import bnLearn from "./locales/learn/bn.json";
+import enLearn from "./locales/learn/en.json";
+import hiLearn from "./locales/learn/hi.json";
+import taLearn from "./locales/learn/ta.json";
+import teLearn from "./locales/learn/te.json";
 import ta from "./locales/ta.json";
 import te from "./locales/te.json";
 
@@ -17,13 +22,14 @@ function getInitialLanguage(): LanguageCode {
   return "en";
 }
 
+// Each language is the main file joined with the extra files for newer screens.
 i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: en },
-    hi: { translation: hi },
-    ta: { translation: ta },
-    te: { translation: te },
-    bn: { translation: bn },
+    en: { translation: { ...en, ...enLearn } },
+    hi: { translation: { ...hi, ...hiLearn } },
+    ta: { translation: { ...ta, ...taLearn } },
+    te: { translation: { ...te, ...teLearn } },
+    bn: { translation: { ...bn, ...bnLearn } },
   },
   lng: getInitialLanguage(),
   fallbackLng: "en",
