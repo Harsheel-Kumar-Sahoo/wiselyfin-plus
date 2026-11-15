@@ -1,6 +1,6 @@
-import { BookOpen, Calculator, House, LogOut, Moon, Sun, User, Wallet, type LucideIcon } from "lucide-react";
+import { BookOpen, Calculator, Coins, House, LogOut, Moon, Sun, User, Wallet, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../auth/useAuth";
 import { useTheme } from "../theme/useTheme";
 import { Button } from "./Button";
@@ -18,7 +18,7 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export function AppShell() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const user = useAuth((s) => s.user);
   const logout = useAuth((s) => s.logout);
   const { theme, toggle } = useTheme();
@@ -53,6 +53,16 @@ export function AppShell() {
         <header className="sticky top-0 z-30 flex items-center justify-between gap-2 border-b border-line bg-bg px-4 py-3">
           <span className="font-semibold md:hidden">{t("app.name")}</span>
           <div className="ml-auto flex items-center gap-2">
+            {user ? (
+              <Link
+                to="/wallet"
+                className="inline-flex min-h-9 items-center gap-2 rounded-full bg-coin-soft px-3 text-sm font-medium text-coin"
+                aria-label={`${t("nav.wallet")}: ${user.finCoins} ${t("coins.finCoins")}`}
+              >
+                <Coins size={18} strokeWidth={1.75} aria-hidden="true" />
+                {user.finCoins.toLocaleString(i18n.language)}
+              </Link>
+            ) : null}
             <LanguageSelect />
             <Button variant="ghost" size="sm" onClick={toggle} aria-label={t("common.switchTheme")}>
               {theme === "light" ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}

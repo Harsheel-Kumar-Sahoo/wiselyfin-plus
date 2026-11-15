@@ -15,6 +15,7 @@ import { ComingSoon, Home, NotFound } from "./pages/Basic";
 import { LessonPage } from "./pages/learn/LessonPage";
 import { Learn } from "./pages/learn/Learn";
 import { PathPage } from "./pages/learn/PathPage";
+import { Wallet } from "./pages/wallet/Wallet";
 
 export function App() {
   const load = useAuth((s) => s.load);
@@ -43,7 +44,7 @@ export function App() {
               <Route path="learn/lesson/:slug" element={<LessonPage />} />
               <Route path="learn/:slug" element={<PathPage />} />
               <Route path="tools" element={<ComingSoon titleKey="nav.tools" />} />
-              <Route path="wallet" element={<ComingSoon titleKey="nav.wallet" />} />
+              <Route path="wallet" element={<Wallet />} />
               <Route path="profile" element={<ComingSoon titleKey="nav.profile" />} />
             </Route>
           </Route>

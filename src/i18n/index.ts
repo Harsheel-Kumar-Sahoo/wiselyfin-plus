@@ -11,6 +11,11 @@ import taLearn from "./locales/learn/ta.json";
 import teLearn from "./locales/learn/te.json";
 import ta from "./locales/ta.json";
 import te from "./locales/te.json";
+import bnWallet from "./locales/wallet/bn.json";
+import enWallet from "./locales/wallet/en.json";
+import hiWallet from "./locales/wallet/hi.json";
+import taWallet from "./locales/wallet/ta.json";
+import teWallet from "./locales/wallet/te.json";
 
 function getInitialLanguage(): LanguageCode {
   try {
@@ -25,11 +30,11 @@ function getInitialLanguage(): LanguageCode {
 // Each language is the main file joined with the extra files for newer screens.
 i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: { ...en, ...enLearn } },
-    hi: { translation: { ...hi, ...hiLearn } },
-    ta: { translation: { ...ta, ...taLearn } },
-    te: { translation: { ...te, ...teLearn } },
-    bn: { translation: { ...bn, ...bnLearn } },
+    en: { translation: { ...en, ...enLearn, ...enWallet } },
+    hi: { translation: { ...hi, ...hiLearn, ...hiWallet } },
+    ta: { translation: { ...ta, ...taLearn, ...taWallet } },
+    te: { translation: { ...te, ...teLearn, ...teWallet } },
+    bn: { translation: { ...bn, ...bnLearn, ...bnWallet } },
   },
   lng: getInitialLanguage(),
   fallbackLng: "en",

@@ -1,0 +1,17 @@
+{
+  "wallet": {
+    "title": "Wallet",
+    "subtitle": "Your FinCoins and where they came from.",
+    "balance": "Current balance",
+    "xp": "{{xp}} XP",
+    "history": "History",
+    "empty": "No coins yet. Pass a lesson quiz to earn your first FinCoins.",
+    "goLearn": "Go to Learn",
+    "balanceAfter": "Balance: {{balance}}",
+    "reason": {
+      "lesson_reward": "Lesson reward",
+      "path_completion": "Path completed",
+      "other": "Other"
+    }
+  }
+}
