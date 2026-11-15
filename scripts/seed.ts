@@ -23,7 +23,7 @@ async function main() {
           published: true,
         },
       },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: "after" }
     );
     if (!path) throw new Error(`Could not save path ${p.slug}`);
 
