@@ -12,6 +12,9 @@ import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
 import { VerifyEmail } from "./pages/auth/VerifyEmail";
 import { ComingSoon, Home, NotFound } from "./pages/Basic";
+import { LessonPage } from "./pages/learn/LessonPage";
+import { Learn } from "./pages/learn/Learn";
+import { PathPage } from "./pages/learn/PathPage";
 
 export function App() {
   const load = useAuth((s) => s.load);
@@ -36,7 +39,9 @@ export function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<AppShell />}>
               <Route index element={<Home />} />
-              <Route path="learn" element={<ComingSoon titleKey="nav.learn" />} />
+              <Route path="learn" element={<Learn />} />
+              <Route path="learn/lesson/:slug" element={<LessonPage />} />
+              <Route path="learn/:slug" element={<PathPage />} />
               <Route path="tools" element={<ComingSoon titleKey="nav.tools" />} />
               <Route path="wallet" element={<ComingSoon titleKey="nav.wallet" />} />
               <Route path="profile" element={<ComingSoon titleKey="nav.profile" />} />

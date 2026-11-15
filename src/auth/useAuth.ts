@@ -20,6 +20,7 @@ type AuthState = {
   user: User | null;
   status: Status;
   load: () => Promise<void>;
+  refresh: () => Promise<void>;
   login: (email: string, password: string) => Promise<void>;
   signup: (name: string, email: string, password: string, language: string) => Promise<void>;
   logout: () => Promise<void>;
@@ -37,6 +38,16 @@ export const useAuth = create<AuthState>((set) => ({
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) set({ user: null, status: "guest" });
       else set({ user: null, status: "error" });
+    }
+  },
+
+  // Updates the user details (coins, XP) quietly. A failure changes nothing.
+  refresh: async () => {
+    try {
+      const data = await api<{ user: User }>("/api/auth/me");
+      set({ user: data.user });
+    } catch {
+      // Keep showing the details we already have.
     }
   },
 
