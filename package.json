@@ -47,6 +47,7 @@
     "dev": "vite",
     "build": "vite build",
     "seed": "tsx --env-file=.env scripts/seed.ts",
-    "learntest": "tsx scripts/learn-test.ts"
+    "learntest": "tsx scripts/learn-test.ts",
+    "engagetest": "tsx scripts/engage-test.ts"
   }
 }
