@@ -1,0 +1,68 @@
+{
+  "engage": {
+    "home": {
+      "greeting": "नमस्ते, {{name}}",
+      "subtitle": "हर दिन थोड़ा-थोड़ा सीखते रहें।",
+      "level": "लेवल {{level}}",
+      "xpToNext": "लेवल {{next}} तक {{xp}} XP",
+      "streak": "दिनों की लगातार शृंखला",
+      "streakDays": "{{count}} दिन",
+      "continueLearning": "सीखना जारी रखें",
+      "viewProfile": "प्रोफ़ाइल देखें"
+    },
+    "challenge": {
+      "title": "रोज़ की चुनौती",
+      "reward": "{{coins}} फिनकॉइन्स और {{xp}} XP जीतें",
+      "submit": "जवाब दें",
+      "chooseOne": "कृपया एक जवाब चुनें।",
+      "correct": "सही। शाबाश।",
+      "wrong": "इस बार सही नहीं। कल फिर कोशिश करें।",
+      "earned": "आपने {{coins}} फिनकॉइन्स और {{xp}} XP कमाए।",
+      "doneToday": "आप आज खेल चुके हैं। कल फिर आइए।",
+      "doneCorrect": "आपने आज सही जवाब दिया।",
+      "doneWrong": "आपने आज जवाब दिया। कल फिर कोशिश करें।",
+      "unavailable": "आज कोई चुनौती उपलब्ध नहीं है।",
+      "streakBonus": "शृंखला बोनस: {{coins}} फिनकॉइन्स।"
+    },
+    "leaderboard": {
+      "title": "लीडरबोर्ड",
+      "subtitle": "XP के हिसाब से शीर्ष सीखने वाले।",
+      "rank": "रैंक",
+      "you": "आप",
+      "yourRank": "आपकी रैंक: {{rank}}",
+      "noRank": "लीडरबोर्ड में आने के लिए XP कमाएँ।",
+      "empty": "अभी लीडरबोर्ड में कोई नहीं है।",
+      "xp": "{{xp}} XP",
+      "level": "लेवल {{level}}"
+    },
+    "profile": {
+      "title": "प्रोफ़ाइल",
+      "joined": "{{date}} को जुड़े",
+      "level": "लेवल {{level}}",
+      "xp": "{{xp}} XP",
+      "streak": "दिनों की लगातार शृंखला",
+      "lessons": "पास किए गए पाठ",
+      "coins": "फिनकॉइन्स",
+      "badges": "बैज",
+      "earned": "{{total}} में से {{count}} मिले",
+      "locked": "अभी नहीं मिला"
+    },
+    "badge": {
+      "first_lesson": "पहला पाठ",
+      "lessons_5": "पाँच पाठ",
+      "lessons_10": "दस पाठ",
+      "streak_3": "3 दिन की शृंखला",
+      "streak_7": "7 दिन की शृंखला",
+      "streak_30": "30 दिन की शृंखला",
+      "first_path": "रास्ता पूरा",
+      "coins_100": "100 फिनकॉइन्स",
+      "level_3": "लेवल 3",
+      "level_5": "लेवल 5",
+      "challenge_5": "पाँच चुनौतियाँ जीतीं"
+    }
+  },
+  "wallet_extra": {
+    "streak_reward": "शृंखला इनाम",
+    "challenge_reward": "रोज़ की चुनौती"
+  }
+}

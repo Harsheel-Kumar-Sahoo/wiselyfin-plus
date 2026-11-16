@@ -1,0 +1,68 @@
+{
+  "engage": {
+    "home": {
+      "greeting": "Hello, {{name}}",
+      "subtitle": "Keep learning a little every day.",
+      "level": "Level {{level}}",
+      "xpToNext": "{{xp}} XP to level {{next}}",
+      "streak": "Day streak",
+      "streakDays": "{{count}} days",
+      "continueLearning": "Continue learning",
+      "viewProfile": "View profile"
+    },
+    "challenge": {
+      "title": "Daily challenge",
+      "reward": "Win {{coins}} FinCoins and {{xp}} XP",
+      "submit": "Answer",
+      "chooseOne": "Please choose an answer.",
+      "correct": "Correct. Well done.",
+      "wrong": "Not correct this time. Try again tomorrow.",
+      "earned": "You earned {{coins}} FinCoins and {{xp}} XP.",
+      "doneToday": "You already played today. Come back tomorrow.",
+      "doneCorrect": "You answered correctly today.",
+      "doneWrong": "You answered today. Try again tomorrow.",
+      "unavailable": "No challenge is available today.",
+      "streakBonus": "Streak bonus: {{coins}} FinCoins."
+    },
+    "leaderboard": {
+      "title": "Leaderboard",
+      "subtitle": "Top learners by XP.",
+      "rank": "Rank",
+      "you": "You",
+      "yourRank": "Your rank: {{rank}}",
+      "noRank": "Earn XP to join the leaderboard.",
+      "empty": "No one is on the leaderboard yet.",
+      "xp": "{{xp}} XP",
+      "level": "Level {{level}}"
+    },
+    "profile": {
+      "title": "Profile",
+      "joined": "Joined {{date}}",
+      "level": "Level {{level}}",
+      "xp": "{{xp}} XP",
+      "streak": "Day streak",
+      "lessons": "Lessons passed",
+      "coins": "FinCoins",
+      "badges": "Badges",
+      "earned": "{{count}} of {{total}} earned",
+      "locked": "Not earned yet"
+    },
+    "badge": {
+      "first_lesson": "First lesson",
+      "lessons_5": "Five lessons",
+      "lessons_10": "Ten lessons",
+      "streak_3": "3-day streak",
+      "streak_7": "7-day streak",
+      "streak_30": "30-day streak",
+      "first_path": "Path finished",
+      "coins_100": "100 FinCoins",
+      "level_3": "Level 3",
+      "level_5": "Level 5",
+      "challenge_5": "Five challenges won"
+    }
+  },
+  "wallet_extra": {
+    "streak_reward": "Streak reward",
+    "challenge_reward": "Daily challenge"
+  }
+}
