@@ -20,7 +20,10 @@ import { Learn } from "./pages/learn/Learn";
 import { PathPage } from "./pages/learn/PathPage";
 import { CompoundCalc } from "./pages/tools/CompoundCalc";
 import { EmiCalc } from "./pages/tools/EmiCalc";
+import { FdCalc } from "./pages/tools/FdCalc";
+import { RdCalc } from "./pages/tools/RdCalc";
 import { SipCalc } from "./pages/tools/SipCalc";
+import { TaxCalc } from "./pages/tools/TaxCalc";
 import { ToolsHome } from "./pages/tools/ToolsHome";
 import { Wallet } from "./pages/wallet/Wallet";
 
@@ -54,6 +57,9 @@ export function App() {
               <Route path="tools/sip" element={<SipCalc />} />
               <Route path="tools/emi" element={<EmiCalc />} />
               <Route path="tools/compound" element={<CompoundCalc />} />
+              <Route path="tools/fd" element={<FdCalc />} />
+              <Route path="tools/rd" element={<RdCalc />} />
+              <Route path="tools/tax" element={<TaxCalc />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
               <Route path="profile" element={<Profile />} />
