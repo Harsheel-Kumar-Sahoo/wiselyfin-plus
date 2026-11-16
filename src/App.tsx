@@ -12,6 +12,8 @@ import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
 import { VerifyEmail } from "./pages/auth/VerifyEmail";
 import { ComingSoon, NotFound } from "./pages/Basic";
+import { Leaderboard } from "./pages/community/Leaderboard";
+import { Profile } from "./pages/community/Profile";
 import { Home } from "./pages/home/Home";
 import { LessonPage } from "./pages/learn/LessonPage";
 import { Learn } from "./pages/learn/Learn";
@@ -46,8 +48,8 @@ export function App() {
               <Route path="learn/:slug" element={<PathPage />} />
               <Route path="tools" element={<ComingSoon titleKey="nav.tools" />} />
               <Route path="wallet" element={<Wallet />} />
-              <Route path="leaderboard" element={<ComingSoon titleKey="nav.leaderboard" />} />
-              <Route path="profile" element={<ComingSoon titleKey="nav.profile" />} />
+              <Route path="leaderboard" element={<Leaderboard />} />
+              <Route path="profile" element={<Profile />} />
             </Route>
           </Route>
 
