@@ -5,8 +5,10 @@ import { rateLimit } from "../middleware/rateLimit.js";
 import { Lesson } from "../models/Lesson.js";
 import { Path } from "../models/Path.js";
 import { Progress } from "../models/Progress.js";
+import { awardBadges } from "../services/badges.js";
 import { creditCoins } from "../services/ledger.js";
 import { gradeQuiz } from "../services/quiz.js";
+import { touchStreak } from "../services/streak.js";
 import { AppError, asyncHandler } from "../utils/errors.js";
 import { parseLang, pick } from "../utils/localize.js";
 import { slugParamSchema, submitQuizSchema } from "../validation/learn.js";
@@ -156,7 +158,7 @@ learnRouter.post(
         $max: { bestScore: grade.percent },
         $setOnInsert: { pathId: lesson.pathId },
       },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: "after" }
     );
     if (grade.passed && progress && !progress.passed) {
       await Progress.updateOne({ _id: progress._id, passed: false }, { passed: true, completedAt: new Date() });
@@ -167,6 +169,9 @@ learnRouter.post(
     let xpEarned = 0;
     let pathCompleted = false;
     let pathBonus = 0;
+    let streakValue = 0;
+    let streakCoins = 0;
+    let newBadges: string[] = [];
 
     if (grade.passed) {
       // The same lesson can only ever pay once, because the reference key is unique.
@@ -205,6 +210,16 @@ learnRouter.post(
           if (paid.credited) pathBonus = path.completionCoins;
         }
       }
+
+      // Streak and badges are a bonus. If they fail, the quiz result is still returned.
+      try {
+        const streak = await touchStreak(userId);
+        streakValue = streak.streak;
+        streakCoins = streak.rewardCoins;
+        newBadges = await awardBadges(userId);
+      } catch (err) {
+        console.error("Streak or badge update failed:", err instanceof Error ? err.message : "unknown");
+      }
     }
 
     res.json({
@@ -222,6 +237,8 @@ learnRouter.post(
         })),
       },
       reward: { coins: coinsEarned, xp: xpEarned, pathCompleted, pathBonus },
+      streak: { value: streakValue, rewardCoins: streakCoins },
+      newBadges,
       balance,
     });
   })
