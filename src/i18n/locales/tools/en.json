@@ -1,0 +1,75 @@
+{
+  "tools": {
+    "title": "Tools",
+    "subtitle": "Calculators and trackers for everyday money decisions.",
+    "disclaimer": "These results are for education only. They are not financial or tax advice.",
+    "calculators": "Calculators",
+    "open": "Open",
+    "back": "All tools",
+    "calculate": "Calculate",
+    "years": "Years",
+    "months": "Months",
+    "ratePercent": "Annual interest rate (%)",
+    "invested": "Amount invested",
+    "estimatedValue": "Estimated value",
+    "estimatedGain": "Estimated gain",
+    "chartTitle": "Growth over the years",
+    "yearLabel": "Year {{year}}",
+    "invalid": "Please enter numbers above zero.",
+    "sip": {
+      "name": "SIP calculator",
+      "desc": "See how a monthly investment can grow.",
+      "monthly": "Monthly investment (INR)",
+      "note": "Returns are not guaranteed. Real returns go up and down."
+    },
+    "emi": {
+      "name": "EMI calculator",
+      "desc": "Find the monthly payment of a loan.",
+      "principal": "Loan amount (INR)",
+      "payment": "Monthly EMI",
+      "totalPaid": "Total amount paid",
+      "totalInterest": "Total interest",
+      "note": "Banks may add fees. Check your loan offer for the exact figures."
+    },
+    "compound": {
+      "name": "Compound interest",
+      "desc": "See interest earning interest over time.",
+      "principal": "Amount (INR)",
+      "frequency": "Interest added",
+      "yearly": "Yearly",
+      "halfYearly": "Half-yearly",
+      "quarterly": "Quarterly",
+      "monthly": "Monthly",
+      "note": "This assumes a fixed rate for the whole period."
+    },
+    "fd": {
+      "name": "FD calculator",
+      "desc": "Estimate what a fixed deposit pays at the end.",
+      "principal": "Deposit amount (INR)",
+      "note": "Interest is added every quarter. Interest on FDs is taxable. Check your bank for exact terms."
+    },
+    "rd": {
+      "name": "RD calculator",
+      "desc": "Estimate a recurring deposit paid every month.",
+      "monthly": "Monthly deposit (INR)",
+      "note": "Interest is added every quarter. Check your bank for exact terms."
+    },
+    "tax": {
+      "name": "Income tax",
+      "desc": "A simple estimate for the new and old regimes.",
+      "income": "Yearly income (INR)",
+      "deductions": "Deductions, old regime only (INR)",
+      "newRegime": "New regime",
+      "oldRegime": "Old regime",
+      "taxable": "Taxable income",
+      "slabTax": "Tax before rebate",
+      "rebate": "Rebate",
+      "cess": "Cess",
+      "total": "Total tax",
+      "better": "Lower tax with the {{regime}}",
+      "same": "Both regimes give the same tax.",
+      "yearLabel": "Rules used: {{year}}",
+      "note": "This is a simple estimate. It ignores surcharge, capital gains and special cases. Always check the official Income Tax Department website."
+    }
+  }
+}
