@@ -11,13 +11,17 @@ import { Login } from "./pages/auth/Login";
 import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
 import { VerifyEmail } from "./pages/auth/VerifyEmail";
-import { ComingSoon, NotFound } from "./pages/Basic";
+import { NotFound } from "./pages/Basic";
 import { Leaderboard } from "./pages/community/Leaderboard";
 import { Profile } from "./pages/community/Profile";
 import { Home } from "./pages/home/Home";
 import { LessonPage } from "./pages/learn/LessonPage";
 import { Learn } from "./pages/learn/Learn";
 import { PathPage } from "./pages/learn/PathPage";
+import { CompoundCalc } from "./pages/tools/CompoundCalc";
+import { EmiCalc } from "./pages/tools/EmiCalc";
+import { SipCalc } from "./pages/tools/SipCalc";
+import { ToolsHome } from "./pages/tools/ToolsHome";
 import { Wallet } from "./pages/wallet/Wallet";
 
 export function App() {
@@ -46,7 +50,10 @@ export function App() {
               <Route path="learn" element={<Learn />} />
               <Route path="learn/lesson/:slug" element={<LessonPage />} />
               <Route path="learn/:slug" element={<PathPage />} />
-              <Route path="tools" element={<ComingSoon titleKey="nav.tools" />} />
+              <Route path="tools" element={<ToolsHome />} />
+              <Route path="tools/sip" element={<SipCalc />} />
+              <Route path="tools/emi" element={<EmiCalc />} />
+              <Route path="tools/compound" element={<CompoundCalc />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
               <Route path="profile" element={<Profile />} />
