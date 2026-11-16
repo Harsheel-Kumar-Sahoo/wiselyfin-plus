@@ -11,7 +11,8 @@ import { Login } from "./pages/auth/Login";
 import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
 import { VerifyEmail } from "./pages/auth/VerifyEmail";
-import { ComingSoon, Home, NotFound } from "./pages/Basic";
+import { ComingSoon, NotFound } from "./pages/Basic";
+import { Home } from "./pages/home/Home";
 import { LessonPage } from "./pages/learn/LessonPage";
 import { Learn } from "./pages/learn/Learn";
 import { PathPage } from "./pages/learn/PathPage";
@@ -45,6 +46,7 @@ export function App() {
               <Route path="learn/:slug" element={<PathPage />} />
               <Route path="tools" element={<ComingSoon titleKey="nav.tools" />} />
               <Route path="wallet" element={<Wallet />} />
+              <Route path="leaderboard" element={<ComingSoon titleKey="nav.leaderboard" />} />
               <Route path="profile" element={<ComingSoon titleKey="nav.profile" />} />
             </Route>
           </Route>

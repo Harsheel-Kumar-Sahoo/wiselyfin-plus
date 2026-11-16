@@ -22,7 +22,11 @@ type WalletResponse = {
   }>;
 };
 
-const KNOWN_REASONS = ["lesson_reward", "path_completion"];
+function reasonKey(reason: string): string {
+  if (reason === "lesson_reward" || reason === "path_completion") return `wallet.reason.${reason}`;
+  if (reason === "streak_reward" || reason === "challenge_reward") return `wallet_extra.${reason}`;
+  return "wallet.reason.other";
+}
 
 export function Wallet() {
   const { t, i18n } = useTranslation();
@@ -84,12 +88,11 @@ export function Wallet() {
           ) : (
             <div className="space-y-3">
               {query.data.entries.map((e) => {
-                const reasonKey = KNOWN_REASONS.includes(e.reason) ? e.reason : "other";
                 const positive = e.amount >= 0;
                 return (
                   <Card key={e.id} className="flex items-center justify-between gap-4">
                     <div className="min-w-0 space-y-1">
-                      <p className="font-medium">{t(`wallet.reason.${reasonKey}`)}</p>
+                      <p className="font-medium">{t(reasonKey(e.reason))}</p>
                       <p className="text-sm text-muted">{dateFormat.format(new Date(e.createdAt))}</p>
                     </div>
                     <div className="text-right">
