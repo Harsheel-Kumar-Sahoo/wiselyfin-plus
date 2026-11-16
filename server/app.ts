@@ -3,6 +3,7 @@ import express from "express";
 import { connectDb } from "./db/connect.js";
 import { accountRouter } from "./routes/account.js";
 import { authRouter } from "./routes/auth.js";
+import { communityRouter } from "./routes/community.js";
 import { cronRouter } from "./routes/cron.js";
 import { engagementRouter } from "./routes/engagement.js";
 import { learnRouter } from "./routes/learn.js";
@@ -44,6 +45,7 @@ app.use("/api/cron", cronRouter);
 app.use("/api/learn", learnRouter);
 app.use("/api/wallet", walletRouter);
 app.use("/api/engagement", engagementRouter);
+app.use("/api/community", communityRouter);
 
 app.use(notFound);
 app.use(errorHandler);
