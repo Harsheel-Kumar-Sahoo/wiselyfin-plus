@@ -8,6 +8,7 @@ import { communityRouter } from "./routes/community.js";
 import { cronRouter } from "./routes/cron.js";
 import { engagementRouter } from "./routes/engagement.js";
 import { learnRouter } from "./routes/learn.js";
+import { stocksRouter } from "./routes/stocks.js";
 import { walletRouter } from "./routes/wallet.js";
 import { errorHandler, notFound } from "./utils/errors.js";
 
@@ -48,6 +49,7 @@ app.use("/api/wallet", walletRouter);
 app.use("/api/engagement", engagementRouter);
 app.use("/api/community", communityRouter);
 app.use("/api/budget", budgetRouter);
+app.use("/api/stocks", stocksRouter);
 
 app.use(notFound);
 app.use(errorHandler);
