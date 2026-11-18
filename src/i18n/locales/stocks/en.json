@@ -1,0 +1,45 @@
+{
+  "stocks": {
+    "title": "Stock simulator",
+    "subtitle": "Practice buying and selling shares with virtual money. No real money is used.",
+    "disclaimer": "This is a learning tool with virtual money. Prices are delayed or simulated and can be wrong. It is not investment advice.",
+    "cash": "Virtual cash",
+    "holdingsValue": "Shares value",
+    "netWorth": "Net worth",
+    "totalPnl": "Total profit or loss",
+    "unrealized": "Unrealized",
+    "realized": "Realized",
+    "market": "Market",
+    "portfolio": "Portfolio",
+    "history": "Trade history",
+    "price": "Price",
+    "qty": "Quantity",
+    "avg": "Average cost",
+    "value": "Value",
+    "pnl": "Profit or loss",
+    "buy": "Buy",
+    "sell": "Sell",
+    "trade": "Trade",
+    "estimated": "Estimated total: {{total}}",
+    "confirmBuy": "Confirm buy",
+    "confirmSell": "Confirm sell",
+    "bought": "Bought {{qty}} of {{symbol}}.",
+    "sold": "Sold {{qty}} of {{symbol}}.",
+    "invalidQty": "Please enter a whole number of shares above zero.",
+    "emptyPortfolio": "You own no shares yet. Pick one from the Market tab.",
+    "emptyHistory": "No trades yet.",
+    "delayed": "Delayed",
+    "simulated": "Simulated",
+    "asOf": "Prices as of {{time}}",
+    "chartTitle": "Profit or loss by share",
+    "side": {
+      "buy": "Buy",
+      "sell": "Sell"
+    },
+    "errors": {
+      "NOT_ENOUGH_CASH": "Not enough virtual cash for this trade.",
+      "NOT_ENOUGH_SHARES": "You do not own that many shares.",
+      "NO_PRICE": "No price is available right now. Please try again."
+    }
+  }
+}
