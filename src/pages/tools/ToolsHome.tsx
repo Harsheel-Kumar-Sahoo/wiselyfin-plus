@@ -1,7 +1,20 @@
-import { BadgeIndianRupee, Calculator, Landmark, LineChart, PiggyBank, Receipt, type LucideIcon } from "lucide-react";
+import {
+  BadgeIndianRupee,
+  Calculator,
+  Landmark,
+  LineChart,
+  PiggyBank,
+  Receipt,
+  Wallet,
+  type LucideIcon,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Card } from "../../components/Card";
+
+const TRACKERS: Array<{ to: string; titleKey: string; descKey: string; icon: LucideIcon }> = [
+  { to: "/budget", titleKey: "budget.title", descKey: "budget.subtitle", icon: Wallet },
+];
 
 const CALCULATORS: Array<{ to: string; key: string; icon: LucideIcon }> = [
   { to: "/tools/sip", key: "sip", icon: LineChart },
@@ -20,6 +33,23 @@ export function ToolsHome() {
         <h1 className="text-2xl font-semibold">{t("tools.title")}</h1>
         <p className="text-muted">{t("tools.subtitle")}</p>
       </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        {TRACKERS.map(({ to, titleKey, descKey, icon: Icon }) => (
+          <Link key={to} to={to} className="block rounded-card">
+            <Card className="flex h-full items-start gap-4 transition-colors hover:bg-soft">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-control bg-accent-soft text-accent">
+                <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-semibold">{t(titleKey)}</h3>
+                <p className="text-sm text-muted">{t(descKey)}</p>
+              </div>
+            </Card>
+          </Link>
+        ))}
+      </div>
+
       <h2 className="text-lg font-semibold">{t("tools.calculators")}</h2>
       <div className="grid gap-4 sm:grid-cols-2">
         {CALCULATORS.map(({ to, key, icon: Icon }) => (

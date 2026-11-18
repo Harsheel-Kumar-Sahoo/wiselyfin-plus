@@ -12,6 +12,7 @@ import { ResetPassword } from "./pages/auth/ResetPassword";
 import { Signup } from "./pages/auth/Signup";
 import { VerifyEmail } from "./pages/auth/VerifyEmail";
 import { NotFound } from "./pages/Basic";
+import { Budget } from "./pages/budget/Budget";
 import { Leaderboard } from "./pages/community/Leaderboard";
 import { Profile } from "./pages/community/Profile";
 import { Home } from "./pages/home/Home";
@@ -60,6 +61,7 @@ export function App() {
               <Route path="tools/fd" element={<FdCalc />} />
               <Route path="tools/rd" element={<RdCalc />} />
               <Route path="tools/tax" element={<TaxCalc />} />
+              <Route path="budget" element={<Budget />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
               <Route path="profile" element={<Profile />} />
