@@ -5,6 +5,7 @@ import {
   LineChart,
   PiggyBank,
   Receipt,
+  TrendingUp,
   Wallet,
   type LucideIcon,
 } from "lucide-react";
@@ -14,6 +15,7 @@ import { Card } from "../../components/Card";
 
 const TRACKERS: Array<{ to: string; titleKey: string; descKey: string; icon: LucideIcon }> = [
   { to: "/budget", titleKey: "budget.title", descKey: "budget.subtitle", icon: Wallet },
+  { to: "/stocks", titleKey: "stocks.title", descKey: "stocks.subtitle", icon: TrendingUp },
 ];
 
 const CALCULATORS: Array<{ to: string; key: string; icon: LucideIcon }> = [
