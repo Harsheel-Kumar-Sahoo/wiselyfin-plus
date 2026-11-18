@@ -31,6 +31,11 @@ import enTools from "./locales/tools/en.json";
 import hiTools from "./locales/tools/hi.json";
 import taTools from "./locales/tools/ta.json";
 import teTools from "./locales/tools/te.json";
+import bnTutor from "./locales/tutor/bn.json";
+import enTutor from "./locales/tutor/en.json";
+import hiTutor from "./locales/tutor/hi.json";
+import taTutor from "./locales/tutor/ta.json";
+import teTutor from "./locales/tutor/te.json";
 import bnWallet from "./locales/wallet/bn.json";
 import enWallet from "./locales/wallet/en.json";
 import hiWallet from "./locales/wallet/hi.json";
@@ -50,11 +55,11 @@ function getInitialLanguage(): LanguageCode {
 // Each language is the main file joined with the extra files for newer screens.
 i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: { ...en, ...enLearn, ...enWallet, ...enEngage, ...enTools, ...enBudget, ...enStocks } },
-    hi: { translation: { ...hi, ...hiLearn, ...hiWallet, ...hiEngage, ...hiTools, ...hiBudget, ...hiStocks } },
-    ta: { translation: { ...ta, ...taLearn, ...taWallet, ...taEngage, ...taTools, ...taBudget, ...taStocks } },
-    te: { translation: { ...te, ...teLearn, ...teWallet, ...teEngage, ...teTools, ...teBudget, ...teStocks } },
-    bn: { translation: { ...bn, ...bnLearn, ...bnWallet, ...bnEngage, ...bnTools, ...bnBudget, ...bnStocks } },
+    en: { translation: { ...en, ...enLearn, ...enWallet, ...enEngage, ...enTools, ...enBudget, ...enStocks, ...enTutor } },
+    hi: { translation: { ...hi, ...hiLearn, ...hiWallet, ...hiEngage, ...hiTools, ...hiBudget, ...hiStocks, ...hiTutor } },
+    ta: { translation: { ...ta, ...taLearn, ...taWallet, ...taEngage, ...taTools, ...taBudget, ...taStocks, ...taTutor } },
+    te: { translation: { ...te, ...teLearn, ...teWallet, ...teEngage, ...teTools, ...teBudget, ...teStocks, ...teTutor } },
+    bn: { translation: { ...bn, ...bnLearn, ...bnWallet, ...bnEngage, ...bnTools, ...bnBudget, ...bnStocks, ...bnTutor } },
   },
   lng: getInitialLanguage(),
   fallbackLng: "en",

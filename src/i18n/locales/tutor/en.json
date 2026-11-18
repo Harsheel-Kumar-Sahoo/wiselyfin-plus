@@ -1,0 +1,28 @@
+{
+  "tutor": {
+    "title": "AI finance tutor",
+    "subtitle": "Ask simple questions about money and get clear answers.",
+    "privacy": "Your questions are sent to an AI service to get an answer. Never type passwords, PINs, OTPs or card numbers.",
+    "disclaimer": "AI answers can be wrong. They are for learning only and are not financial, tax or legal advice.",
+    "placeholder": "Type your question",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "you": "You",
+    "tutor": "Tutor",
+    "emptyTitle": "Ask your first question",
+    "emptyBody": "Try one of these to start.",
+    "clear": "Clear chat",
+    "suggestions": {
+      "sip": "What is a SIP and how does it work?",
+      "upi": "How can I stay safe while using UPI?",
+      "emergency": "How big should my emergency fund be?",
+      "credit": "How can I improve my credit score?"
+    },
+    "status": {
+      "failed": "The tutor could not answer right now. Please try again in a little while.",
+      "not_configured": "The tutor is not available at the moment.",
+      "secret_warning": "Please do not share passwords, PINs, OTPs or card numbers. Remove them and ask again."
+    },
+    "limit": "You have asked many questions. Please wait a while and try again."
+  }
+}
