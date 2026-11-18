@@ -50,6 +50,7 @@
     "seed": "tsx --env-file=.env scripts/seed.ts",
     "learntest": "tsx scripts/learn-test.ts",
     "engagetest": "tsx scripts/engage-test.ts",
-    "budgettest": "tsx scripts/budget-test.ts"
+    "budgettest": "tsx scripts/budget-test.ts",
+    "stockstest": "tsx scripts/stocks-test.ts"
   }
 }
