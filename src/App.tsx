@@ -27,6 +27,7 @@ import { RdCalc } from "./pages/tools/RdCalc";
 import { SipCalc } from "./pages/tools/SipCalc";
 import { TaxCalc } from "./pages/tools/TaxCalc";
 import { ToolsHome } from "./pages/tools/ToolsHome";
+import { Tutor } from "./pages/tutor/Tutor";
 import { Wallet } from "./pages/wallet/Wallet";
 
 export function App() {
@@ -64,6 +65,7 @@ export function App() {
               <Route path="tools/tax" element={<TaxCalc />} />
               <Route path="budget" element={<Budget />} />
               <Route path="stocks" element={<Stocks />} />
+              <Route path="tutor" element={<Tutor />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
               <Route path="profile" element={<Profile />} />

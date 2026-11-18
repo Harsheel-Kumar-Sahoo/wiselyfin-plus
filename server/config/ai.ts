@@ -1,6 +1,6 @@
 // Easy-to-edit AI settings.
 // Model names and free limits change often. Check Google AI Studio and update MODEL if needed.
-export const GEMINI_MODEL = "gemini-4-hydrogen";
+export const GEMINI_MODEL = "gemini-2.0-flash";
 
 export const MAX_QUESTION_CHARS = 500;
 export const MAX_HISTORY_MESSAGES = 6; // earlier messages sent along for context

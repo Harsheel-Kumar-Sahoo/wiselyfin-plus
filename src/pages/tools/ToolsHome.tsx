@@ -1,5 +1,6 @@
 import {
   BadgeIndianRupee,
+  Bot,
   Calculator,
   Landmark,
   LineChart,
@@ -14,6 +15,7 @@ import { Link } from "react-router-dom";
 import { Card } from "../../components/Card";
 
 const TRACKERS: Array<{ to: string; titleKey: string; descKey: string; icon: LucideIcon }> = [
+  { to: "/tutor", titleKey: "tutor.title", descKey: "tutor.subtitle", icon: Bot },
   { to: "/budget", titleKey: "budget.title", descKey: "budget.subtitle", icon: Wallet },
   { to: "/stocks", titleKey: "stocks.title", descKey: "stocks.subtitle", icon: TrendingUp },
 ];
