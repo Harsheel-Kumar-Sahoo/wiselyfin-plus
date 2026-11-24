@@ -4,6 +4,7 @@ import {
   Calculator,
   Landmark,
   LineChart,
+  Newspaper,
   PiggyBank,
   Receipt,
   TrendingUp,
@@ -16,6 +17,7 @@ import { Card } from "../../components/Card";
 
 const TRACKERS: Array<{ to: string; titleKey: string; descKey: string; icon: LucideIcon }> = [
   { to: "/tutor", titleKey: "tutor.title", descKey: "tutor.subtitle", icon: Bot },
+  { to: "/news", titleKey: "news.title", descKey: "news.subtitle", icon: Newspaper },
   { to: "/budget", titleKey: "budget.title", descKey: "budget.subtitle", icon: Wallet },
   { to: "/stocks", titleKey: "stocks.title", descKey: "stocks.subtitle", icon: TrendingUp },
 ];

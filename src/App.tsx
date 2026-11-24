@@ -19,6 +19,7 @@ import { Home } from "./pages/home/Home";
 import { LessonPage } from "./pages/learn/LessonPage";
 import { Learn } from "./pages/learn/Learn";
 import { PathPage } from "./pages/learn/PathPage";
+import { News } from "./pages/news/News";
 import { Stocks } from "./pages/stocks/Stocks";
 import { CompoundCalc } from "./pages/tools/CompoundCalc";
 import { EmiCalc } from "./pages/tools/EmiCalc";
@@ -66,6 +67,7 @@ export function App() {
               <Route path="budget" element={<Budget />} />
               <Route path="stocks" element={<Stocks />} />
               <Route path="tutor" element={<Tutor />} />
+              <Route path="news" element={<News />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="leaderboard" element={<Leaderboard />} />
               <Route path="profile" element={<Profile />} />
