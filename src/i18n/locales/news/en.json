@@ -1,0 +1,13 @@
+{
+  "news": {
+    "title": "Financial news",
+    "subtitle": "Business headlines from India, saved and refreshed every few hours.",
+    "disclaimer": "News comes from outside sources and is in English. It is for information only and is not financial advice.",
+    "read": "Read the full story",
+    "updated": "Updated {{time}}",
+    "olderNotice": "Showing the last saved news. Fresh news could not be loaded right now.",
+    "unavailableTitle": "News is not available right now",
+    "unavailableBody": "Please check again in a little while. The rest of the app works as usual.",
+    "unknownSource": "Unknown source"
+  }
+}

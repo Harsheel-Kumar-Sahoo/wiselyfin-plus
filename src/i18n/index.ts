@@ -19,6 +19,11 @@ import enLearn from "./locales/learn/en.json";
 import hiLearn from "./locales/learn/hi.json";
 import taLearn from "./locales/learn/ta.json";
 import teLearn from "./locales/learn/te.json";
+import bnNews from "./locales/news/bn.json";
+import enNews from "./locales/news/en.json";
+import hiNews from "./locales/news/hi.json";
+import taNews from "./locales/news/ta.json";
+import teNews from "./locales/news/te.json";
 import bnStocks from "./locales/stocks/bn.json";
 import enStocks from "./locales/stocks/en.json";
 import hiStocks from "./locales/stocks/hi.json";
@@ -55,11 +60,11 @@ function getInitialLanguage(): LanguageCode {
 // Each language is the main file joined with the extra files for newer screens.
 i18n.use(initReactI18next).init({
   resources: {
-    en: { translation: { ...en, ...enLearn, ...enWallet, ...enEngage, ...enTools, ...enBudget, ...enStocks, ...enTutor } },
-    hi: { translation: { ...hi, ...hiLearn, ...hiWallet, ...hiEngage, ...hiTools, ...hiBudget, ...hiStocks, ...hiTutor } },
-    ta: { translation: { ...ta, ...taLearn, ...taWallet, ...taEngage, ...taTools, ...taBudget, ...taStocks, ...taTutor } },
-    te: { translation: { ...te, ...teLearn, ...teWallet, ...teEngage, ...teTools, ...teBudget, ...teStocks, ...teTutor } },
-    bn: { translation: { ...bn, ...bnLearn, ...bnWallet, ...bnEngage, ...bnTools, ...bnBudget, ...bnStocks, ...bnTutor } },
+    en: { translation: { ...en, ...enLearn, ...enWallet, ...enEngage, ...enTools, ...enBudget, ...enStocks, ...enTutor, ...enNews } },
+    hi: { translation: { ...hi, ...hiLearn, ...hiWallet, ...hiEngage, ...hiTools, ...hiBudget, ...hiStocks, ...hiTutor, ...hiNews } },
+    ta: { translation: { ...ta, ...taLearn, ...taWallet, ...taEngage, ...taTools, ...taBudget, ...taStocks, ...taTutor, ...taNews } },
+    te: { translation: { ...te, ...teLearn, ...teWallet, ...teEngage, ...teTools, ...teBudget, ...teStocks, ...teTutor, ...teNews } },
+    bn: { translation: { ...bn, ...bnLearn, ...bnWallet, ...bnEngage, ...bnTools, ...bnBudget, ...bnStocks, ...bnTutor, ...bnNews } },
   },
   lng: getInitialLanguage(),
   fallbackLng: "en",
