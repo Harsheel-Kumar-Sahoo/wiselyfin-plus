@@ -6,6 +6,10 @@ import { taBeginner } from "./ta-beginner.js";
 import { taInvesting } from "./ta-investing.js";
 import { taScamAwareness } from "./ta-scam-awareness.js";
 import { taTaxesSavings } from "./ta-taxes-savings.js";
+import { teBeginner } from "./te-beginner.js";
+import { teInvesting } from "./te-investing.js";
+import { teScamAwareness } from "./te-scam-awareness.js";
+import { teTaxesSavings } from "./te-taxes-savings.js";
 import type { PathTranslation } from "./types.js";
 
 export const LANGS = ["hi", "ta", "te", "bn"] as const;
@@ -25,6 +29,11 @@ export const translations: Record<TransLang, Record<string, PathTranslation>> = 
     "taxes-and-savings": taTaxesSavings,
     "scam-awareness": taScamAwareness,
   },
-  te: {},
+  te: {
+    beginner: teBeginner,
+    investing: teInvesting,
+    "taxes-and-savings": teTaxesSavings,
+    "scam-awareness": teScamAwareness,
+  },
   bn: {},
 };
