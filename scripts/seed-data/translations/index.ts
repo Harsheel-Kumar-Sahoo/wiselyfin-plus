@@ -1,3 +1,7 @@
+import { bnBeginner } from "./bn-beginner.js";
+import { bnInvesting } from "./bn-investing.js";
+import { bnScamAwareness } from "./bn-scam-awareness.js";
+import { bnTaxesSavings } from "./bn-taxes-savings.js";
 import { hiBeginner } from "./hi-beginner.js";
 import { hiInvesting } from "./hi-investing.js";
 import { hiScamAwareness } from "./hi-scam-awareness.js";
@@ -35,5 +39,10 @@ export const translations: Record<TransLang, Record<string, PathTranslation>> = 
     "taxes-and-savings": teTaxesSavings,
     "scam-awareness": teScamAwareness,
   },
-  bn: {},
+  bn: {
+    beginner: bnBeginner,
+    investing: bnInvesting,
+    "taxes-and-savings": bnTaxesSavings,
+    "scam-awareness": bnScamAwareness,
+  },
 };
